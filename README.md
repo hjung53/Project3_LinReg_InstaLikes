@@ -19,8 +19,19 @@
 
 그래서 각 포스트당 #해쉬태그(카페이름), 코멘트, date, like, place, tags, link(유저링크), follower, following, con_count(포스트수) 데이터를 수집함.
 
+![df](https://user-images.githubusercontent.com/72849752/105574513-89a34680-5da8-11eb-8a63-14a7add6ad63.JPG)
 
 
+
+## 데이터 전처리
+- 처리과정: "ipynb"
+- 컬럼 선택, 결측치 제거, 컬럼 데이터 타입 변경, 컬럼명 변경( #팔로잉:'follow'-> 'following', #포스트: 'con_count'-> 'post')
+- 활성화되지 않는 계정이나 광고계정 제거
+
+```
+df_over10 = df[(df['like']>10) & (df['follower']>10) & (df['following']>10)]
+
+```
 
 
 
