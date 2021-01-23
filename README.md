@@ -30,7 +30,6 @@
 
 ```
 df_over10 = df[(df['like']>10) & (df['follower']>10) & (df['following']>10)]
-
 ```
 
 
